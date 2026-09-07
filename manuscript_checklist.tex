@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+
 \documentclass[a4paper,11pt,dvipdfmx]{jlreq}
 
 \usepackage{type1cm,newtxtext}
@@ -44,7 +46,7 @@
 \pagestyle{fancy}
 
 
-\renewcommand{\labelitemi}{$\Box$}
+\renewcommand{\labelitemi}{$\Box$\ }
 \section{表記について}
 \begin{itemize}
  \item 和文中で読点と句点は``全角''のカンマとピリオド「，．」を使用している．
@@ -67,8 +69,10 @@
 （例：ラズパイ$\rightarrow$小型コンピュータ）
  \item 固有名詞の綴りに誤りはないことを確認した．
  \item すべての文の主語，述語，目的語は明確である．
- \item すべての文の助詞は適切に使用している．
+ \item 主語と述語，形容詞と目的語など，関連の強い語句同士はできるだけ近くに記述している． \\
+ \item すべての文の助詞（てにをはが）は適切に使用している．
  \item 適切な接続詞を用いて，文と文のつながりが明確である．
+ \item 「既知未知法」に沿って，既知の情報を先に，未知の情報を後に記述している．
 \end{itemize}
 
 \section{論文・報告書の内容について}
@@ -104,7 +108,7 @@
 \begin{itemize}
  \item 結論では論文・報告書の内容をもれなく網羅し，適切にまとめられている．
  \item 結論において初出の内容は含まれず，本文中で説明されてもののみである．
- \item 参考文献は「著者名」「論文・発表題目」「論文誌名または発表会議名」「ページ番号または発表番号」「発表年」の情報がもれなく記述されている．
+ \item 参考文献は「著者名」「論文・発表題目」「論文誌名または発表会議名」「ページ番号または発表番号」「発表年」の情報がもれなく記述されている．記法は各投稿先の指定に順ずること．
  \item 参考文献は読者の参考になるものを適切に参照している．（著者が参考にしたものを列挙するものではない）
 \end{itemize}
 
@@ -122,5 +126,101 @@
 \textbf{\large
 $\Box$ 上記のチェック項目についてセルフチェックをもれなく丁寧に行い，原稿の完成度は十分であることを保証する．
 }
+
+\newpage
+
+\appendix
+\section*{（付録）参考文献の書き方}
+参考文献の書き方はそれぞれの指定の様式に順ずる記法を採用します．ここでは日本ロボット学会誌の様式を記載します．
+
+\begin{thebibliography}{99}
+\bibitem{jbook}
+著者：書名．引用ページ，出版社，発行年．
+%（和文著書の例）
+\bibitem{ebook}
+Author(s): Book Title. pp.XX--YY, publisher, year.
+%（英文著書の例）
+\bibitem{jpaper}
+著者： ``題名''，掲載誌名，巻，号，ページ，発行年．
+%（和文論文の例）
+\bibitem{epaper}
+Author(s): ``Title,''
+Name of Journal, vol.W, no.X, pp.YYY--ZZZ, year.
+%（英文論文の例）
+% 記 載 例
+\bibitem{Takahasi93}
+高橋，吉田，坪内，木下：
+``投稿原稿作成の手引''，
+日本ロボット学会誌，vol.11, no.7, pp.88--99, 1993.
+\bibitem{Yoshida93}
+K.~Yoshida, T.~Tsubouchi and G.~Kinoshita:
+``Instruction of making your manuscript,''
+J. of the Robotics Society of Japan,
+vol.11, no.7, pp.88--99, 1993.
+\bibitem{Yoshida93b}
+吉田，坪内：
+``論文作成のしおり''，
+日本ロボット学会第 11 回学術講演会予稿集，
+pp.1--5, 1993.
+\bibitem{Takahashi94}
+K.~Takahashi and G.~Kinoshita:
+Guide Lines for Writing Your Paper. pp.6--10,
+The Robotics Society Press, 1994.
+\bibitem{Asama94}
+H.~Asama:
+``Fundamental writing,''
+Proc.\ of Int.\ Conf.\ Technical Writing,
+Tokyo, Japan, Apr.\ 1994, pp.2001--2006.
+\end{thebibliography}
+
+\begin{itemize}
+\item 和文の著者名は原則，名字のみを記載する．
+\item 英文の著者名は原則，first name はイニシャルのみで，family name を記載する．
+\item 和文の著者が3名以上の場合には，高橋ら，のように「ら」をつけて省略できる．
+\item 英部の著者名が3名以上の場合には，T.~Takahashi et al. のように「et al.」をつけて省略できる（ピリオド，スペースの記法に注意）
+\end{itemize}
+
+（\LaTeX 記法）
+\begin{verbatim}
+\begin{thebibliography}{99}
+\bibitem{jbook}
+著者：書名．引用ページ，出版社，発行年．
+%（和文著書の例）
+\bibitem{ebook}
+Author(s): Book Title. pp.XX--YY, publisher, year.
+%（英文著書の例）
+\bibitem{jpaper}
+著者： ``題名''，掲載誌名，巻，号，ページ，発行年．
+%（和文論文の例）
+\bibitem{epaper}
+Author(s): ``Title,''
+Name of Journal, vol.W, no.X, pp.YYY--ZZZ, year.
+%（英文論文の例）
+% 記 載 例
+\bibitem{Takahasi93}
+高橋，吉田，坪内，木下：
+``投稿原稿作成の手引''，
+日本ロボット学会誌，vol.11, no.7, pp.88--99, 1993.
+\bibitem{Yoshida93}
+K.~Yoshida, T.~Tsubouchi and G.~Kinoshita:
+``Instruction of making your manuscript,''
+J. of the Robotics Society of Japan,
+vol.11, no.7, pp.88--99, 1993.
+\bibitem{Yoshida93b}
+吉田，坪内：
+``論文作成のしおり''，
+日本ロボット学会第 11 回学術講演会予稿集，
+pp.1--5, 1993.
+\bibitem{Takahashi94}
+K.~Takahashi and G.~Kinoshita:
+Guide Lines for Writing Your Paper. pp.6--10,
+The Robotics Society Press, 1994.
+\bibitem{Asama94}
+H.~Asama:
+``Fundamental writing,''
+Proc.\ of Int.\ Conf.\ Technical Writing,
+Tokyo, Japan, Apr.\ 1994, pp.2001--2006.
+\end{thebibliography}{99}
+\end{verbatim}
 
 \end{document}
